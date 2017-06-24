@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tagger View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TaggerViewController" customModule="LinguisticsPlayground" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello, world!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iw1-dr-e5b">
+                                <rect key="frame" x="16" y="36" width="343" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="5NI-vL-3JB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="42l-ED-hOO">
+                                <rect key="frame" x="16" y="358" width="343" height="289"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWR-Gl-Gzr">
+                                <rect key="frame" x="16" y="320" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.2523876428604126" green="0.60918694734573364" blue="0.96669536828994751" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Analyse">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="analyseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LVm-K0-PYo"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3yX-Bu-DGO">
+                                <rect key="frame" x="16" y="284" width="343" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95526649746192893" green="0.95526649746192893" blue="0.95526649746192893" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zWR-Gl-Gzr" firstAttribute="top" secondItem="3yX-Bu-DGO" secondAttribute="bottom" constant="8" id="9Ln-6m-mma"/>
+                            <constraint firstItem="3yX-Bu-DGO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Qn8-ru-uTn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zWR-Gl-Gzr" secondAttribute="trailing" id="S8Y-Pt-xHQ"/>
+                            <constraint firstItem="iw1-dr-e5b" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="VaX-E6-Gfr"/>
+                            <constraint firstItem="42l-ED-hOO" firstAttribute="top" secondItem="zWR-Gl-Gzr" secondAttribute="bottom" constant="8" id="YhW-Gz-lbx"/>
+                            <constraint firstItem="iw1-dr-e5b" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dWd-Y4-gvO"/>
+                            <constraint firstItem="zWR-Gl-Gzr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fQz-PI-ts0"/>
+                            <constraint firstItem="42l-ED-hOO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jhe-Dw-U3j"/>
+                            <constraint firstItem="3yX-Bu-DGO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="n9h-sF-de9"/>
+                            <constraint firstItem="3yX-Bu-DGO" firstAttribute="top" secondItem="iw1-dr-e5b" secondAttribute="bottom" constant="8" id="pZ2-yz-x23"/>
+                            <constraint firstItem="42l-ED-hOO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qpJ-fu-3sw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="42l-ED-hOO" secondAttribute="bottom" constant="20" id="tGh-N7-6o6"/>
+                            <constraint firstItem="iw1-dr-e5b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xc2-tl-CkW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="analyseButton" destination="zWR-Gl-Gzr" id="8c4-NX-16p"/>
+                        <outlet property="entryTextView" destination="iw1-dr-e5b" id="ocZ-WV-KVF"/>
+                        <outlet property="outputTextView" destination="42l-ED-hOO" id="rEa-xj-1fb"/>
+                        <outlet property="tagSchemeSegmentedControl" destination="3yX-Bu-DGO" id="PuG-K7-zXX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
